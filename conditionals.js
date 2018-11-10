@@ -59,9 +59,9 @@ let spankey = READLINE.question("Is Spankey smiling? (yes or no): ");
 // Write code that prints the largest of three scores. If there is a tie for
 // first place, simply print one of the tie winners.
 console.log("*** Problem 4: First Place ***");
-let score1 = READLINE.question("Enter the first score: ");
-let score2 = READLINE.question("Enter the second score: ");
-let score3 = READLINE.question("Enter the third score: ");
+let score1 = parseInt(READLINE.question("Enter the first score: "));
+let score2 = parseInt(READLINE.question("Enter the second score: "));
+let score3 = parseInt(READLINE.question("Enter the third score: "));
 if (score1 > score2 && score1 > score3) {
 console.log("The highest score is score 1: " + score1)
 }
@@ -84,7 +84,21 @@ console.log("The highest score is score 3: " + score3)
 // money they have.
 console.log("*** Problem 5: Phone Shopping ***");
 let money = READLINE.question("How much money do you have?: ");
-
+if (money >= 30) {
+	console.log("you can buy a prepaid phone")
+}
+if (money >= 100) {
+	console.log("you can buy a bottom-tier phone")
+}
+if (money >= 300) {
+	console.log("you can buy a middle-tier phone")
+}
+if (money >= 600) {
+	console.log("you can buy a top tier phone")
+}
+else if (money < 30) {
+	console.log("get out! you can't afford anything")
+}
 
 // **** Problem 6: Guess My Number ****
 // Write code that plays a simple number guessing game with a user. You can
@@ -95,3 +109,11 @@ let money = READLINE.question("How much money do you have?: ");
 console.log("*** Problem 6: Guess My Number ***");
 let myNum = 5;
 let guess = READLINE.question("I'm thinking of a number. Guess it: ");
+if (guess == myNum) {
+	console.log("Good job you guessed my number!")
+}
+else if (guess == myNum - 1 || guess == myNum - 2 || guess == myNum - 3 || guess == myNum + 1 || guess == myNum + 2 || guess == myNum + 3) {
+	console.log("Your warm")
+}
+else
+console.log("Your cold")
