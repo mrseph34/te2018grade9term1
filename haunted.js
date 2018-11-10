@@ -72,15 +72,15 @@ console.log("You start to get chased by the shadow figure while running he stabs
   if (rw == "r"){
     console.log(`A shadow figure starts chasing ${player.name}.`)
   tr = READLINE.question("Turn around or keep running? (t or r)")
-}
   if (tr == "t"){
-    console.log(`${player.name} turn around too bad because ${player.name} not gets stabbed and killed by the shadow figure`)
+    console.log(`${player.name} turned around too bad because ${player.name} gets stabbed and killed by the shadow figure bleeds out and dies slowly with no one to help.`)
   }
   if (tr == "r"){
     console.log(`${player.name} isn't fast enough to outrun the shadow figure gets stabbed and killed`)
   }
+}
   else if (rw == "w"){
     console.log(`A shadow figure starts walking toward ${player.name} slowly, he soon speeds up and stabs ${player.name} in the back and leave ${player.name} to bleed out, what a sad way to die says the shadow figure.`)
   }
 }
-console.log("Thanks for playing, hope you enjoyed!");
+console.log("Thanks for playing, hope you enjoyed!")
