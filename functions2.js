@@ -1,4 +1,4 @@
-
+print = console.log
 /******************************************************************************
                                    sumDouble(a, b)
 Instructions:
@@ -11,15 +11,18 @@ sumDouble(3, 2) → 5
 sumDouble(2, 2) → 8
 *******************************************************************************/
 
-
-
-// Remove comment below to test this function.
-//testSumDouble();
-
+function sumDouble(n1,n2){
+  if (n1 == n2){
+    return (n1+n2) * 2
+  }else{
+   return n1+n2
+  }
+}
+testSumDouble()
 /******************************************************************************
                                    makes10(a, b)
 Instructions:
-Given 2 numbers, a and b, return true if one if them is 10 or if their sum is 10.
+Given 2 numbers, a and b, return true if one of them is 10 or if their sum is 10.
 
 Examples:
 makes10(9, 10) → true
@@ -27,11 +30,14 @@ makes10(9, 9) → false
 makes10(1, 9) → true
 *******************************************************************************/
 
-
-
-// Remove comment below to test this function.
-//testMakes10();
-
+function makes10(a,b){
+  if(a == 10 || b == 10 || a + b == 10){
+    return true
+  }else{
+    return false
+  }
+}
+testMakes10()
 /******************************************************************************
                           parrotTrouble(talking, hour)
 Instructions:
@@ -46,11 +52,14 @@ parrotTrouble(true, 7) → false
 parrotTrouble(false, 6) → false
 *******************************************************************************/
 
-
-
-// Remove comment below to test this function.
-//testParrotTrouble();
-
+function parrotTrouble(talking,hour){
+if(talking == true &&(hour > 7 || hour < 20)){
+return true
+}else{
+return false
+  }
+}
+testParrotTrouble();
 /******************************************************************************
                              alarmClock(day, vacation)
 Instructions:
@@ -66,11 +75,18 @@ alarmClock(6, true) → "off"
 alarmClock(0, false) → "10:00"
 *******************************************************************************/
 
-
-
-// Remove comment below to test this function.
-//testAlarmClock();
-
+function alarmClock(day, vacation){
+if(day >0 && day <6 && vacation == false){
+return "7:00"
+}
+if(((day == 0 || day == 6) && !vacation) ||(vacation && day >0 && day <6 )){
+  return "10:00"
+}
+else{
+  return "off"
+}
+}
+testAlarmClock();
 /******************************************************************************
                       caughtSpeeding(speed, isBirthday)
 Instructions:
@@ -87,11 +103,21 @@ caughtSpeeding(65, false) → 1
 caughtSpeeding(65, true) → 0
 *******************************************************************************/
 
-
-
-// Remove comment below to test this function.
-//testCaughtSpeeding();
-
+function caughtSpeeding(speed, isBirthday){
+  if(isBirthday){
+    speed == speed - 5
+  }
+if(speed <= 60){
+  return 0
+}
+if(speed <81 && speed > 60){
+  return 1
+}
+if(speed >80){
+  return 2
+}
+}
+testCaughtSpeeding();
 /****************************************************************************
                                     Tests
 *****************************************************************************/
