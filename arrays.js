@@ -8,13 +8,16 @@ firstLast6([1, 2, 6]) → true
 firstLast6([6, 1, 2, 3]) → true
 firstLast6([13, 6, 1, 2, 3]) → false
 *******************************************************************************/
-
 function firstLast6(nums) {
-
+if (nums[(nums.length - nums.length)] == 6 || nums[(nums.length - 1)] == 6) {
+  return true
+}
+else 
+  return false
 }
 
 // Remove comment below to test this function.
-//testFirstLast6();
+testFirstLast6();
 
 /******************************************************************************
                                    midThree()
@@ -28,11 +31,11 @@ midThree([1, 2, 3]) → [1, 2, 3]
 *******************************************************************************/
 
 function midThree(nums) {
-
+return nums.slice(nums.length / 2 - 1, nums.length / 2 + 2)
 }
 
 // Remove comment below to test this function.
-//testMidThree();
+testMidThree();
 
 /******************************************************************************
                                    fizzBuzz()
@@ -74,11 +77,17 @@ copyEvens([6, 1, 2, 4, 5, 8], 3) → [6, 2, 4]
 *******************************************************************************/
 
 function copyEvens(nums, count) {
-
+  b = -1
+  even = nums[b]%2 == 0
+for(n = 0; n <= count; n++){
+b++
+if (even){
+  return nums[b]
 }
-
+}
+}
 // Remove comment below to test this function.
-//testCopyEvens();
+testCopyEvens();
 
 /******************************************************************************
                                    zeroMax()
